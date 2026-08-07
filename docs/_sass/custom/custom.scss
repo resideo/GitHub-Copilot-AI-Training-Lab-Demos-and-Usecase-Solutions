@@ -1,0 +1,422 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap");
+
+:root {
+  --brand-cyan: #44d4ff;
+  --brand-mint: #38f4c8;
+  --brand-amber: #ffd166;
+  --panel-bg: #f5fbff;
+  --panel-border: rgba(48, 119, 168, 0.28);
+}
+
+body {
+  font-family: "Sora", "Segoe UI", sans-serif;
+  letter-spacing: 0.01em;
+  text-wrap: pretty;
+  background:
+    radial-gradient(72% 58% at 82% 0%, rgba(56, 244, 200, 0.08) 0%, rgba(56, 244, 200, 0) 60%),
+    radial-gradient(90% 70% at 0% 10%, rgba(68, 212, 255, 0.1) 0%, rgba(68, 212, 255, 0) 58%),
+    #f3fbff;
+}
+
+.main-content p,
+.main-content li,
+.main-content blockquote {
+  color: #1f3348;
+  line-height: 1.7;
+}
+
+.main-content strong,
+.main-content b {
+  color: #0f2238;
+  font-weight: 600;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+}
+
+.side-bar {
+  background:
+    radial-gradient(120% 80% at 20% 10%, rgba(68, 212, 255, 0.14) 0%, rgba(68, 212, 255, 0) 45%),
+    radial-gradient(120% 80% at 80% 0%, rgba(56, 244, 200, 0.1) 0%, rgba(56, 244, 200, 0) 50%),
+    #f7fbff;
+  border-right: 1px solid rgba(48, 119, 168, 0.16);
+}
+
+/* Sidebar brand header (top-left) — shows the InfoMagnus logo. */
+.side-bar .site-header {
+  min-height: 3.5rem;
+  border-bottom: 1px solid rgba(68, 212, 255, 0.14);
+}
+
+.main-header {
+  border-bottom: 1px solid rgba(68, 212, 255, 0.2);
+  min-height: 3.5rem;
+  background:
+    linear-gradient(180deg, rgba(248, 252, 255, 0.97), rgba(242, 249, 255, 0.93)),
+    radial-gradient(125% 100% at 0% 0%, rgba(68, 212, 255, 0.16) 0%, rgba(68, 212, 255, 0) 58%);
+}
+
+/* Hide top-right aux links area (e.g., stale/cached 'View on GitHub'). */
+.main-header .aux-nav {
+  display: none !important;
+}
+
+.main-header .search {
+  max-width: 60rem;
+}
+
+.site-nav {
+  margin-top: 0.5rem;
+}
+
+.site-nav .nav-list {
+  line-height: 1.4;
+}
+
+.site-nav .nav-list > .nav-list-item > .nav-list-link {
+  font-weight: 700;
+  color: #173a5a;
+}
+
+.site-nav .nav-list .nav-list {
+  margin-inline-start: 0.55rem;
+  padding-inline-start: 0.35rem;
+  border-inline-start: 1px solid rgba(68, 212, 255, 0.16);
+}
+
+.site-nav .nav-list .nav-list .nav-list-link {
+  font-size: 0.95rem;
+  color: #3d5873;
+}
+
+.site-nav .nav-list .nav-list-link {
+  border-radius: 10px;
+  padding: 0.45rem 0.65rem;
+  transition: background-color 140ms ease, color 140ms ease;
+  overflow-wrap: anywhere;
+}
+
+.site-nav .nav-list .nav-list-link:hover {
+  background: rgba(68, 212, 255, 0.12);
+  color: #10304d;
+}
+
+.site-nav .nav-list .nav-list-item.active > .nav-list-link {
+  background: linear-gradient(120deg, rgba(68, 212, 255, 0.2), rgba(56, 244, 200, 0.12));
+  color: #0f2b45;
+}
+
+.site-nav .nav-list-expander {
+  color: #5b6f82;
+}
+
+.site-nav .nav-list-expander:hover {
+  color: #10304d;
+}
+
+.main {
+  background:
+    radial-gradient(70% 50% at 80% 0%, rgba(56, 244, 200, 0.08) 0%, rgba(56, 244, 200, 0) 60%),
+    radial-gradient(80% 60% at 0% 8%, rgba(68, 212, 255, 0.08) 0%, rgba(68, 212, 255, 0) 55%),
+    #f7fbff;
+}
+
+/* Remove Just the Docs default content width cap so pages can use full screen width. */
+.main-content-wrap,
+.main-content {
+  max-width: none;
+}
+
+.main-content-wrap {
+  width: 100%;
+  background:
+    linear-gradient(180deg, rgba(250, 253, 255, 0.92), rgba(244, 250, 255, 0.82)),
+    radial-gradient(120% 78% at 0% 0%, rgba(68, 212, 255, 0.16) 0%, rgba(68, 212, 255, 0.04) 45%, rgba(68, 212, 255, 0) 72%);
+}
+
+.main-content {
+  background: transparent;
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+}
+
+.site-logo {
+  width: 100%;
+  height: 50px;
+  background-position: left center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.site-button {
+  border-radius: 12px;
+}
+
+.main-content h1 {
+  font-size: clamp(1.7rem, 2.4vw, 2.35rem);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+/* First paragraph after the page title = the meta/subtitle line. */
+.main-content h1 + p {
+  color: #486380;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.main-content h1.home-title {
+  font-size: clamp(2.3rem, 3.4vw, 4rem);
+  line-height: 1.04;
+  letter-spacing: 0;
+  margin-bottom: 1.05rem;
+  text-wrap: balance;
+}
+
+@media (min-width: 74rem) {
+  .main-content h1.home-title {
+    white-space: nowrap;
+  }
+}
+
+.main-content h2,
+.main-content h3 {
+  letter-spacing: 0.01em;
+}
+
+.main-content a {
+  color: #0b66c3;
+  text-underline-offset: 0.2em;
+}
+
+.main-content a:hover {
+  color: #084f99;
+}
+
+.main-content a:visited {
+  color: #5a46c7;
+}
+
+.main-content .btn {
+  border-radius: 999px;
+  border: 1px solid rgba(68, 212, 255, 0.5);
+  background: linear-gradient(130deg, rgba(68, 212, 255, 0.2), rgba(56, 244, 200, 0.16));
+  color: #0e2d49;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.main-content .btn.btn-primary {
+  background: linear-gradient(130deg, #0f89c5, #24b08e);
+  border-color: transparent;
+  color: #fff;
+}
+
+.main-content .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(17, 95, 147, 0.22);
+  border-color: rgba(68, 212, 255, 0.75);
+}
+
+.main-content hr {
+  border-color: rgba(68, 212, 255, 0.22);
+}
+
+.main-content .note,
+.main-content .highlight,
+.main-content .warning {
+  border-radius: 14px;
+  border: 1px solid var(--panel-border);
+  background: var(--panel-bg);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.main-content table {
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(68, 212, 255, 0.24);
+}
+
+.main-content table th {
+  background: rgba(56, 244, 200, 0.08);
+}
+
+.main-content table td,
+.main-content table th {
+  border-color: rgba(68, 212, 255, 0.18);
+}
+
+.main-content pre {
+  border-radius: 14px;
+  border: 1px solid rgba(68, 212, 255, 0.24);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+}
+
+.main-content details {
+  border: 1px solid rgba(68, 212, 255, 0.28);
+  border-radius: 12px;
+  background: #f8fcff;
+  padding: 0.4rem 0.8rem;
+}
+
+.main-content summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Demo page polish: render "Prompts to type" as clear step cards. */
+.main-content h2#prompts-to-type + p + ol {
+  list-style: none;
+  counter-reset: prompt-step;
+  margin: 1rem 0 1.2rem;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.main-content h2#prompts-to-type + p + ol > li {
+  counter-increment: prompt-step;
+  position: relative;
+  margin: 0;
+  padding: 0.75rem 0.85rem 0.75rem 2.9rem;
+  border: 1px solid rgba(68, 212, 255, 0.24);
+  border-radius: 12px;
+  background:
+    linear-gradient(120deg, rgba(68, 212, 255, 0.08), rgba(56, 244, 200, 0.05)),
+    #fafdff;
+  line-height: 1.55;
+}
+
+.main-content h2#prompts-to-type + p + ol > li::before {
+  content: counter(prompt-step);
+  position: absolute;
+  inset-inline-start: 0.75rem;
+  inset-block-start: 0.62rem;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #11314d;
+  background: linear-gradient(145deg, rgba(68, 212, 255, 0.65), rgba(56, 244, 200, 0.5));
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.main-content h2#prompts-to-type + p + ol > li code {
+  background: #f2f8ff;
+  border: 1px solid rgba(105, 215, 255, 0.28);
+  border-radius: 7px;
+  padding: 0.05rem 0.35rem;
+}
+
+.home-hero {
+  position: relative;
+  border: 1px solid rgba(68, 212, 255, 0.3);
+  border-radius: 20px;
+  padding: 1.4rem 1.2rem;
+  background:
+    linear-gradient(150deg, rgba(68, 212, 255, 0.12), rgba(56, 244, 200, 0.08)),
+    #f7fcff;
+  overflow: hidden;
+}
+
+.home-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -60% auto;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 209, 102, 0.32), rgba(255, 209, 102, 0));
+  pointer-events: none;
+}
+
+.hero-kickers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #13324f;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(68, 212, 255, 0.12);
+  border: 1px solid rgba(68, 212, 255, 0.38);
+}
+
+.home-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 1rem 0 0;
+}
+
+.home-card {
+  border: 1px solid rgba(68, 212, 255, 0.24);
+  border-radius: 16px;
+  padding: 1rem;
+  background: #fbfdff;
+}
+
+.home-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 50rem) {
+  .site-logo {
+    height: 28px;
+  }
+
+  .main-header {
+    min-height: 3rem;
+  }
+
+  .main-header .search {
+    max-width: 100%;
+  }
+
+  .home-hero {
+    border-radius: 14px;
+    padding: 1rem;
+  }
+
+  .main-content .btn {
+    width: 100%;
+    margin-bottom: 0.55rem;
+  }
+
+  .main-content h1.home-title {
+    white-space: normal;
+    font-size: clamp(2rem, 8.5vw, 2.7rem);
+    line-height: 1.08;
+  }
+}
+
+/* Hide the theme's default "This site uses Just the Docs" credit
+   (desktop sidebar + mobile), while keeping the "Back to top" link. */
+.site-footer,
+footer .d-md-none {
+  display: none;
+}

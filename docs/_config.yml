@@ -1,0 +1,40 @@
+title: GitHub Copilot Hands-on Labs
+description: >-
+  Language-neutral hands-on labs and guided demos for GitHub Copilot — built for
+  large, mixed-language cohorts. Every demo ships its code inline: copy, paste, run.
+remote_theme: just-the-docs/just-the-docs
+
+# Sidebar brand logo (top-left area)
+logo: "/assets/infomagnus-banner.svg"
+
+# Build settings
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+# Search (client-side, scales to any number of readers)
+search_enabled: true
+nav_fold: true
+search:
+  heading_level: 3
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+
+# Footer
+back_to_top: true
+back_to_top_text: "Back to top"
+last_edit_timestamp: false
+
+# Code copy button (just-the-docs built-in)
+enable_copy_code_button: true
+
+# Color scheme
+# Use the default light scheme
+
+# Exclude non-site files from the build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
