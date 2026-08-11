@@ -70,6 +70,18 @@ https://kalpanareddyc.github.io/copilot-labs-content/
 4. Confirm docs changes were pushed to main.
 5. If using a custom domain, validate DNS records and HTTPS certificate status.
 
+### Optional: repository About settings
+
+These are optional quality-of-life settings in the repository home page About panel.
+
+1. Open the repository home page and click the `About` gear icon.
+2. Add a short Description, for example: GitHub Copilot hands-on labs and demos with copy-paste-run starter code.
+3. For Website, either:
+  - check `Use your GitHub Pages website`
+4. Add Topics (recommended): github-copilot, jekyll, github-pages, just-the-docs, labs, demos.
+5. Under Include in the home page, enable items you want visible (commonly Releases, Deployments, Packages).
+6. Click Save changes.
+
 **Preview locally:**
 
 ```bash
