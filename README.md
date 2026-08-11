@@ -19,25 +19,56 @@ participant-facing GitHub Pages site (built with the [just-the-docs](https://jus
 Jekyll theme). Every demo page embeds its full starter code **inline**, so participants
 copy, paste, and run with **no clone required** — which scales cleanly to a room of 300+.
 
-The content is organized by course, each with **Labs** and **Demos**:
+The content is organized by course track:
 
-| Module | Labs | Demos |
+| Module | Labs | Demos / Use Cases |
 |---|---|---|
-| **Fundamental** | [docs/fundamental/labs.md](docs/fundamental/labs.md) | [docs/fundamental/demos.md](docs/fundamental/demos.md) (Demos 1–4) |
-| **Intermediate** | [docs/intermediate/labs.md](docs/intermediate/labs.md) | [docs/intermediate/demos.md](docs/intermediate/demos.md) (Demos 1–6) |
+| **Fundamental** | [docs/fundamental/labs.md](docs/fundamental/labs.md) | [docs/fundamental/demos.md](docs/fundamental/demos.md) |
+| **Intermediate** | [docs/intermediate/labs.md](docs/intermediate/labs.md) | [docs/intermediate/demos.md](docs/intermediate/demos.md) |
+| **Advanced** | [docs/Advance/labs.md](docs/Advance/labs.md) | [docs/Advance/demos.md](docs/Advance/demos.md) |
+| **Prompt Engineering** | [docs/Prompt-Engg/labs.md](docs/Prompt-Engg/labs.md) | [docs/Prompt-Engg/demos.md](docs/Prompt-Engg/demos.md) |
+| **Secure Development** | N/A | [docs/Security-Dev/demos.md](docs/Security-Dev/demos.md) |
+| **Office Hours** | N/A | [docs/Office-Hours/usecases.md](docs/Office-Hours/usecases.md) |
+| **Agents & MCP** | [docs/Agents-MCP/labs.md](docs/Agents-MCP/labs.md) | [docs/Agents-MCP/demos.md](docs/Agents-MCP/demos.md) |
 
 ---
 
 ## 🌐 Hosted docs site (GitHub Pages)
 
-The site lives in [`docs/`](docs/) and is the **single source of truth** for all lab and
+The site lives in the [docs](docs/) folder and is the **single source of truth** for all lab and
 demo content.
 
-**Enable it once (repo admin):**
+### One-time repository settings (repo admin)
 
-1. Push to `main`. The workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml) builds the site.
-2. Repo **Settings → Pages → Build and deployment → Source → GitHub Actions**.
-3. The site publishes at `https://<owner>.github.io/copilot-labs/`.
+1. Open repository Settings -> Pages.
+2. Under Build and deployment, set Source to GitHub Actions.
+3. Confirm the workflow file exists at [.github/workflows/pages.yml](.github/workflows/pages.yml).
+4. Optional: configure Custom domain if needed.
+5. Keep Enforce HTTPS enabled.
+
+### Publish flow
+
+1. Commit and push changes to main.
+2. The workflow [.github/workflows/pages.yml](.github/workflows/pages.yml) runs automatically.
+3. Wait for the Deploy GitHub Pages workflow to complete.
+4. Open the published site URL from Settings -> Pages.
+
+Current published URL:
+https://kalpanareddyc.github.io/copilot-labs-content/
+
+### Rebuild or republish manually
+
+1. Go to Actions -> Deploy GitHub Pages.
+2. Select the latest run (or trigger a new run if manual dispatch is enabled).
+3. Verify deployment is successful, then refresh the site URL.
+
+### Troubleshooting checklist
+
+1. Ensure GitHub Actions are enabled for the repository.
+2. Ensure Source remains GitHub Actions in Settings -> Pages.
+3. Review Actions logs for workflow or Jekyll build errors.
+4. Confirm docs changes were pushed to main.
+5. If using a custom domain, validate DNS records and HTTPS certificate status.
 
 **Preview locally:**
 
