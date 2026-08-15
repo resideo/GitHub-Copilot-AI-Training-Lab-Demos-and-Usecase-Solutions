@@ -3,9 +3,10 @@ description: >-
   Language-neutral hands-on labs and guided demos for GitHub Copilot — built for
   large, mixed-language cohorts. Every demo ships its code inline: copy, paste, run.
 remote_theme: just-the-docs/just-the-docs
+baseurl: /GitHub-Copilot-AI-Training-Lab-Demos-and-Usecase-Solutions
 
 # Sidebar brand logo (top-left area)
-logo: "/assets/infomagnus-banner.svg"
+#logo: "/assets/infomagnus-banner.svg"
 
 # Build settings
 plugins:
