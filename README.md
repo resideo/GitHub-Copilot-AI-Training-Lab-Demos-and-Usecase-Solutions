@@ -54,7 +54,7 @@ demo content.
 4. Open the published site URL from Settings -> Pages.
 
 Current published URL:
-https://kalpanareddyc.github.io/copilot-labs-content/
+https://github.com/resideo/GitHub-Copilot-AI-Training-Lab-Demos-and-Usecase-Solutions
 
 ### Rebuild or republish manually
 
